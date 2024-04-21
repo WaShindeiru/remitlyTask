@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "PolicyName": {},
+    "PolicyDocument": {
+
+      "type": "object",
+      "properties": {
+
+        "Version": {},
+        "Statement": {
+
+          "type": "array",
+          "items": {
+
+            "type": "object",
+            "properties": {
+
+              "Sid": {},
+              "Effect": {},
+              "Action": {
+
+                "type": "array",
+                "items": {}
+              },
+              "Resource": {}
+
+            },
+            "required": ["Sid", "Effect", "Action", "Resource"]
+          }
+        }
+      },
+      "required": ["Version", "Statement"]
+    }
+  },
+  "required": ["PolicyName", "PolicyDocument"]
+}

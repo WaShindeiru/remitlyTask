@@ -1,0 +1,28 @@
+{
+  "PolicyName": "root",
+  "PolicyDocument": {
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "ThirdStatement",
+        "Effect": "Allow",
+        "Action": [
+          "s3:List*",
+          "s3:Get*"
+        ],
+        "Resource": [
+          "arn:aws:s3:::confidential-data"
+        ]
+      },
+      {
+        "Sid": "IamListAccess",
+        "Effect": "Allow",
+        "Action": [
+          "iam:ListRoles",
+          "iam:ListUsers"
+        ],
+        "Resource": "arn:aws:s3:::confidential-data/*"
+      }
+    ]
+  }
+}
